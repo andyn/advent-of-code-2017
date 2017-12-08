@@ -22,7 +22,7 @@ end
 
 defmodule Day1b do
     def sum_halfway_wrap(list) do
-        half_length = div(length(list), 2)
+        half_length = length(list) |> div(2)
         [first_half, second_half] = Enum.chunk(list, half_length, half_length)
         sum_lists(list, second_half ++ first_half, 0)
     end
